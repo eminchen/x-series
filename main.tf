@@ -23,7 +23,7 @@ output "org_default_moid" {
 }
 
 module "intersight_policy_bundle" {
-  source = "github.com/pl247/tf-intersight-policy-bundle"
+  source = "github.com/eminchen/tf-intersight-policy-bundle"
 
   # external sources
   organization    = data.intersight_organization_organization.default.id
