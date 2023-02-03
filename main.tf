@@ -19,15 +19,15 @@ data "intersight_organization_organization" "buffalo_dc" {
     name = "buffalo_dc"
 }
 # print default org moid
-output "org_default_moid" {
-    value = data.intersight_organization_organization.default.moid
+output "org_moid" {
+    value = data.intersight_organization_organization.buffalo_dc.moid
 }
 
 module "intersight_policy_bundle" {
   source = "github.com/eminchen/tf-intersight-policy-bundle"
 
   # external sources
-  organization    = data.intersight_organization_organization.default.id
+  organization    = data.intersight_organization_organization.buffalo_dc.id
 
   # every policy created will have this prefix in its name
   policy_prefix = "pod1"
@@ -51,7 +51,7 @@ module "intersight_policy_bundle" {
   dns_preferred = "64.102.6.247"
 #  dns_alternate = "172.22.16.253"
 
-  ntp_timezone = "America/Winnipeg"
+  ntp_timezone = "America/Toronto"
 
   # starting values for wwnn, wwpn-a/b and mac pools (size 255)
   wwnn-block   = "20:00:00:CA:FE:00:00:01"
