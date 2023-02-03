@@ -9,9 +9,10 @@ terraform {
 }
 
 provider "intersight" {
-    apikey = var.api_key
-    secretkey = var.secretkey
-    endpoint = var.endpoint
+    apikey        = var.intersight_key
+    secretkey     = var.intersight_secret
+    endpoint      = var.endpoint
+}
 }
 
 data "intersight_organization_organization" "default" {
