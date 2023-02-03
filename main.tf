@@ -15,8 +15,8 @@ provider "intersight" {
 }
 }
 
-data "intersight_organization_organization" "default" {
-    name = "default"
+data "intersight_organization_organization" "buffalo_dc" {
+    name = "buffalo_dc"
 }
 # print default org moid
 output "org_default_moid" {
