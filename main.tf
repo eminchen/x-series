@@ -13,7 +13,6 @@ provider "intersight" {
     secretkey     = var.intersight_secret
     endpoint      = var.endpoint
 }
-}
 
 data "intersight_organization_organization" "buffalo_dc" {
     name = "buffalo_dc"
