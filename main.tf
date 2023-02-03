@@ -59,8 +59,8 @@ module "intersight_policy_bundle" {
   wwpn-b-block = "20:00:00:CA:FE:0B:00:01"
   mac-block    = "00:CA:FE:00:00:01"
 
-#  tags = [
-#    { "key" : "Environment", "value" : "PDC-Prod" },
-#    { "key" : "Orchestrator", "value" : "Terraform" }
-# ]
+ tags = [
+   { "key" : "Project", "value" : "Alpha" },
+   { "key" : "Orchestrator", "value" : "Terraform" }
+ ]
 }
